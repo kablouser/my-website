@@ -123,7 +123,7 @@ function SlideShow(props)
                 clearTimeoutRef();
             };
         }
-    }, [slideIndex]);
+    }, [slideIndex, delay, slides.length]);
 
     return (
         <div className="slideshow">
@@ -145,7 +145,7 @@ function SlideShow(props)
                 {slides.map((_, mapIndex) => (
                     <div
                         key={mapIndex}
-                        className={mapIndex == slideIndex ? "slideshowDot active" : "slideshowDot"}
+                        className={mapIndex === slideIndex ? "slideshowDot active" : "slideshowDot"}
                         onClick={() =>
                         {
                             setSlideIndex(mapIndex);
