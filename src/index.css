@@ -14,21 +14,24 @@
 }
 
 .slideshow {
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 200px;
 }
 
 .slideshowSlider {
     white-space: nowrap;
     transition: ease 1000ms;
+    display: flex;
 }
 
 .slide {
-    display: inline-block;
+    display: inline-flex;
     
-    height: 400px;
-    width: 100%;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 40px;
 }
 

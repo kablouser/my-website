@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import logo from './logo.svg';
 
 class Page1 extends React.Component
 {
     render()
     {
-        return (<h1>This is Page1.</h1>);
+        return (<h1>This is Page1. It's blank.</h1>);
     }
 }
 
@@ -22,7 +23,7 @@ class Page2 extends React.Component
                     <iframe
                         width="853"
                         height="480"
-                        src={"https://www.youtube.com/embed/1bWXRDvfrs4"}
+                        src={"https://www.youtube.com/embed/sIpvJ_yYd0o"}
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrpyted-media; gyroscope; picture-in-picture"
                         allowFullScreen
@@ -42,13 +43,12 @@ class Page3 extends React.Component
                 <h1>This is Page3.</h1>
                 <SlideShow
                     slides={[
-                        <p>{"slide content"}</p>,
-                        <p>{"slide content"}</p>,
-                        <p>{"slide content"}</p>,
+                        <img src={logo} alt="logo" />,
+                        <div><h1>what</h1></div>,
                         <div style={{ backgroundColor: "#2288FE", width: "100%", height: "100%", borderRadius: 50 }} />,
                         <div style={{ backgroundColor: "#2288FE", width: "100%", height: "100%", borderRadius: 50 }} />,
                         <div style={{ backgroundColor: "#2288FE", width: "100%", height: "100%", borderRadius: 50 }} />]}
-                    delay={5000} />
+                />
             </div>
         );
     }
