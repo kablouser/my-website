@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import Button from 'react-bootstrap/Button'
 import GameDisplay from './gameDisplay';
 import Badge from "./RS_PROGRAMMING_FINALIST_badge.png";
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';

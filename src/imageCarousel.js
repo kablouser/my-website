@@ -20,7 +20,7 @@ function ImageCarousel(props)
             <Carousel.Item>
                 <img
                     src={src}
-                    alt="Carousel Image"
+                    alt="Screenshot of Game"
                 />
             </Carousel.Item>
         );

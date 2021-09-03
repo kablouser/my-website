@@ -46,9 +46,9 @@ function GameDisplay(props)
     if (isTitleImageDefined)
     {
         if (isURLDefined)
-            titleElement = <a href={URL}><img src={titleImage} /></a>;
+            titleElement = <a href={URL}><img src={titleImage} alt="Game Title" /></a>;
         else
-            titleElement = <img src={titleImage} />;
+            titleElement = <img src={titleImage} alt="Game Title" />;
     }
     else
     {
@@ -76,7 +76,7 @@ function GameDisplay(props)
 
     const badgeElements = isBadgesDefined ? badges.map((badge) =>
     {
-        return <img src={badge} style={{ objectFit: "contain" }} />
+        return <img src={badge} style={{ objectFit: "contain" }} alt="badge" />
     }) : null;
 
     return (
