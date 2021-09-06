@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-function ImageCarousel(props)
+export default function ImageCarousel(props)
 {
     const isDark = props.isDark;
     const images = props.images;
@@ -19,6 +19,7 @@ function ImageCarousel(props)
         return (
             <Carousel.Item>
                 <img
+                    className="full-fit-image"
                     src={src}
                     alt="Screenshot of Game"
                 />
@@ -32,5 +33,3 @@ function ImageCarousel(props)
             <Carousel {...variantProperty} interval={null} >{carouselImages}</Carousel>
         </div>);
 }
-
-export default ImageCarousel;

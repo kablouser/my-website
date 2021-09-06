@@ -1,6 +1,6 @@
-import ImageCarousel from "./imageCarousel";
+import ImageCarousel from './imageCarousel';
 
-function GameDisplay(props)
+export default function GameDisplay(props)
 {
     const backgroundImage = props.backgroundImage;
     const backgroundColor = props.backgroundColor;
@@ -14,7 +14,6 @@ function GameDisplay(props)
     const youtubeVideo = props.youtubeVideo;
     const carouselImages = props.carouselImages;
     const tags = props.tags;
-    const body = props.body;
     const badges = props.badges;
 
     const isBackgroundImageDefined = typeof backgroundImage !== "undefined";
@@ -46,9 +45,9 @@ function GameDisplay(props)
     if (isTitleImageDefined)
     {
         if (isURLDefined)
-            titleElement = <a href={URL}><img src={titleImage} alt="Game Title" /></a>;
+            titleElement = <a href={URL}><img className="full-fit-image" src={titleImage} alt={title} /></a>;
         else
-            titleElement = <img src={titleImage} alt="Game Title" />;
+            titleElement = <img className="full-fit-image" src={titleImage} alt={title} />;
     }
     else
     {
@@ -69,23 +68,18 @@ function GameDisplay(props)
             />
         </div> : null;
 
-    const bodyParagraphs = body.split('\n').map((paragraph) =>
-    {
-        return <p>{paragraph}</p>;
-    });
-
     const badgeElements = isBadgesDefined ? badges.map((badge) =>
     {
-        return <img src={badge} style={{ objectFit: "contain" }} alt="badge" />
+        return <img className="full-fit-image" src={badge} style={{ objectFit: "contain" }} alt="badge" />
     }) : null;
 
     return (
         <div
-            className="game-display-background"
+            className="background"
             {...backgroundStyle}
         >
             <div
-                className="game-display-foreground"
+                className="foreground"
                 style={{ color: "red" }}
                 {...foregroundStyle}
             >
@@ -101,18 +95,16 @@ function GameDisplay(props)
                         <ImageCarousel isDark={carouselIsDark} images={carouselImages} />
                     }
                     <em>{tags}</em>
+                    <br />
+                    <br />
                 </div>
-                <div style={{ margin: "10px" }}>
-                    {bodyParagraphs}
-                    {
-                        badgeElements != null &&
-                        <div style={{ height: "100px" }}>
-                            {badgeElements}
-                        </div>
-                    }
-                </div>
+                {props.children}
+                {
+                    badgeElements != null &&
+                    <div style={{ height: "100px" }}>
+                        {badgeElements}
+                    </div>
+                }
             </div>
         </div>);
 }
-
-export default GameDisplay;
