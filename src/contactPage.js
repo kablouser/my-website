@@ -7,10 +7,6 @@ export default function ContactPage()
             <Table striped bordered>
                 <tbody>
                     <tr>
-                        <td className="contact-col-left">Phone</td>
-                        <td>07840 059015</td>
-                    </tr>
-                    <tr>
                         <td className="contact-col-left">Email</td>
                         <td className="email">contact@zechenghu.games</td>
                     </tr>
@@ -25,7 +21,7 @@ export default function ContactPage()
                     <tr>
                         <td></td>
                         <td>
-                            <a href="https://www.linkedin.com/in/jason-hu-b0b76b176/">
+                            <a href="https://www.linkedin.com/in/zechenghu/">
                                 <img className="contact-logo" alt="Linked in" src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.svg.original.svg" />
                             </a>
                         </td>
