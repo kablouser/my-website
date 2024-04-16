@@ -1,5 +1,4 @@
 import Table from 'react-bootstrap/Table';
-import CV from './zecheng hu cv.pdf';
 
 export default function ContactPage()
 {
@@ -14,10 +13,6 @@ export default function ContactPage()
                     <tr>
                         <td className="contact-col-left">Email</td>
                         <td className="email">contact@zechenghu.games</td>
-                    </tr>
-                    <tr>
-                        <td className="contact-col-left">CV</td>
-                        <td><a href={CV}>Click to download</a></td>
                     </tr>
                     <tr>
                         <td></td>
